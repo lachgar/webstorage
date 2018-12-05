@@ -1,5 +1,8 @@
 var tab = Array();
 var id = 0;
+
+//Cette fonction permet de charger les données
+//et de les afficher dans le tableau
 function load() {
     if (typeof localStorage != 'undefined') {
         if ('e' in localStorage) {
