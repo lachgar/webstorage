@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Local Storage</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+    <link href="css.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+    <fieldset>
+        <legend>Gestion des employes</legend>
+        <table >
+            <tr>
+                <td>Nom : </td>
+                <td><input id="nom" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Prénom :</td>
+                <td><input id="prenom" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Email : </td>
+                <td><input id="email" type="email" /></td>
+            </tr>
+            <tr>
+                    <td></td>
+                    <td><button id='valider'>Valider</button></td>
+                </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+            <legend>Liste des employes</legend>
+            <table class="tab">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Supprimer</th>
+                        <th>Modifier</th>
+                    </tr>
+                </thead>
+                <tbody id="contenu">
+                        
+                </tbody>
+            </table>
+        </fieldset>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+fieldset  {
+    width: 50%;
+    margin: auto;
+}
+.tab{
+    border-collapse: collapse;
+    margin: 0 auto; 
+}
+
+.tab td, th{
+    border : 1px solid black;
+    padding: 10px 15px;
+}
+
+.tab tr:nth-child(2n){
+    background-color: #BBB;
+}
+
+.tab tr:nth-child(2n + 1){
+    background-color: #EEE;
+}
