@@ -7,6 +7,15 @@ function load() {
     if (typeof localStorage != 'undefined') {
         if ('e' in localStorage) {
             //traitement
+            var eJson = localStorage.getItem('e');
+            var eJava = JSON.parse(eJson);
+            tab = eJava;
+            var contenu = $('#contenu');
+            var ligne ='';
+            tab.forEach(e=>{
+                ligne+='<tr><td>'+e.nom+'</td><td>'+e.prenom+'</td><td>'+e.email+'</td><td></td><td></td></tr>';
+            });
+            contenu.html(ligne);
         }
     } else {
         alert("localStorage n'est pas supporté");
@@ -17,6 +26,14 @@ $(document).ready(function () {
     load();
     $('#valider').click(function () {
         //Traitement
+        var e = {
+            nom:$('#nom').val(),
+            prenom:$('#prenom').val(),
+            email: $('#email').val()
+        };
+        tab.push(e);
+        localStorage.setItem('e', JSON.stringify(tab));
+        load();
     });
 
     $('#contenu').on('click', '.delete', function () {
